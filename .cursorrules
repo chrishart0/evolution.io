@@ -12,9 +12,9 @@
 - Root contains `README.md` and `.gitignore`
 
 ## Tech Stack
-- **Frontend**: React, PixiJS, TypeScript (port: 5173)
+- **Frontend**: React 19, PixiJS 8.x, TypeScript (port: 5173), ShadCDN
 - **Backend**: Node.js, Express, Socket.IO, TypeScript (port: 3000)
-- **Build**: Vite (frontend), tsc (backend)
+- **Build**: Vite 6 (frontend), tsc (backend)
 - **Code Quality**: ESLint, Prettier
 
 ## Key Files
