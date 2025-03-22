@@ -1,0 +1,34 @@
+# .cursorrules for Evolution .io
+
+## Project Overview
+- **Name**: Evolution.io
+- **Type**: Multiplayer browser .io game
+- **Goal**: Players evolve a race of creatures to dominate in 15-minute rounds
+- **Key Mechanics**: Upgrade traits (speed, size, etc.), eat opponents, collect pellets, win via alpha score or population
+
+## Repository Structure
+- `frontend/`: React + PixiJS client (UI and game canvas)
+- `backend/`: Node.js + Express + Socket.IO server (game logic and sync)
+- Root contains `README.md` and `.gitignore`
+
+## Tech Stack
+- **Frontend**: React, PixiJS, TypeScript (port: 5173)
+- **Backend**: Node.js, Express, Socket.IO, TypeScript (port: 3000)
+- **Build**: Vite (frontend), tsc (backend)
+- **Code Quality**: ESLint, Prettier
+
+## Key Files
+- `frontend/src/App.tsx`: Main React entry point
+- `backend/src/index.ts`: Server and game loop entry point
+
+## Development Notes
+- **Run**: `npm run dev` (frontend), `npm start` (backend)
+- **Sync**: Socket.IO events (e.g., `init`, `creatureUpdate`) connect frontend and backend
+- **Game Loop**: Backend updates every 0.1s, broadcasts to clients
+- **Types**: Use TypeScript interfaces (e.g., `{ x: number, y: number }` for creatures)
+
+## AI Guidelines
+- Focus on small, modular changes (e.g., one feature per commit)
+- Check `README.md` for setup if stuck
+- Use existing Socket.IO events for new features
+- Keep logic server-side, rendering client-side
